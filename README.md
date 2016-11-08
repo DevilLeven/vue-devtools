@@ -1,25 +1,16 @@
 # vue-devtools
 An electron devtools extension for debugging Vue.js applications.
 
+##官方Vue chrome debug插件修改
+使用方法
 ## Usage
 
-In an electron proj
 
 ```bash
-$ npm i vue-devtools --save-dev
+下载该插件，打开chrome Extensions  选择  Load unpacked extension…
+
+选择已下载好的 vue-devtools
 ```
+Vue加载完成后立刻设置其 `Vue.config.devtools = true` 属性
+在chrome的Developer Tools 中即可看到Vue 标签 进行调试
 
-then, run install in your `main.js`
-
-```javascript
-const { app, BrowserWindow } = require('electron')
-app.on('ready', () => {
-  ....
-  if (process.env.NODE_ENV !== 'production') {
-    require('vue-devtools').install()
-  }
-  ....
-})
-```
-
-## An npm package base on https://github.com/vuejs/vue-devtools
